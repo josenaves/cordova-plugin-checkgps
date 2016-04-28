@@ -10,7 +10,7 @@ If you always wanted a simple and straight way to check GPS on Android, here is 
 Go to your Cordova project and type:
 
 ```
-> cordova add plugin cordova-plugin-checkgps
+> cordova plugin  add https://github.com/josenaves/cordova-plugin-checkgps
 ```
 
 ## Use in a Cordova app
