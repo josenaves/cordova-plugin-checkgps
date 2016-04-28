@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="cordova.plugin.checkgps" version="0.0.1">
+	
+	<name>CheckGps</name>
+	<description>Cordova CheckGps Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,gps,locationmanager,android</keywords>
+	
+	<js-module src="www/checkgps.js" name="checkgps">
+		<clobbers target="checkgps" />
+	</js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CheckGps">
+                <param name="android-package" value="com.josenaves.plugin.CheckGps"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/CheckGps.java" target-dir="src/com/joseneaves/plugin" />
+    </platform>
+
+</plugin>
