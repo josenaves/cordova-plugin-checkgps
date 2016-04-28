@@ -9,13 +9,13 @@ If you always wanted a simple and straight way to check GPS on Android, here is 
 
 Go to your Cordova project and type:
 
-'''
+```
 > cordova add plugin cordova-plugin-checkgps
-'''
+```
 
 ## Use in a Cordova app
 
-'''
+``` javascript
     if (typeof cordova !== 'undefined') {
       checkgps.isGpsEnabled(
         function(msg) {
@@ -27,4 +27,4 @@ Go to your Cordova project and type:
         }
       );
     }
-'''
+```
