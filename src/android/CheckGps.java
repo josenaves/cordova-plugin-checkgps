@@ -29,7 +29,7 @@ public class CheckGps extends CordovaPlugin {
     }	
 
 	private boolean isGpsEnabled() {
-		LocationManager locationManager = (LocationManager) (AudioManager) this.cordova.getActivity().getSystemService(Context.LOCATION_SERVICE);
+		LocationManager locationManager = (LocationManager) this.cordova.getActivity().getSystemService(Context.LOCATION_SERVICE);
 		boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 		Log.d(TAG, String.format("CheckGps.isGpsEnabled() = %s", enabled) );
 		return enabled;
