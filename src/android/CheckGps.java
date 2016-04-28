@@ -4,11 +4,12 @@ import android.util.Log;
 import android.location.LocationManager;
 import android.content.Context;
 
+import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class CheckGps {
+public class CheckGps extends CordovaPlugin {
 
 	private static final String TAG = CheckGps.class.getSimpleName();
 
@@ -28,7 +29,7 @@ public class CheckGps {
     }	
 
 	private boolean isGpsEnabled() {
-		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		LocationManager locationManager = (LocationManager) Context.getSystemService(Context.LOCATION_SERVICE);
 		boolean enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 		Log.d(TAG, String.format("CheckGps.isGpsEnabled() = %s", enabled) );
 		return enabled;
