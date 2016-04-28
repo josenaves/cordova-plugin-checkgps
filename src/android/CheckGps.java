@@ -18,9 +18,9 @@ public class CheckGps extends CordovaPlugin {
         if ("isGpsEnabled".equals(action)) {
 
         	if (isGpsEnabled()) {
-        		callbackContext.success("GPS is enabled");	
+        		callbackContext.success(">>>>>>>> GPS is enabled :)");	
         	} else  {
-        		callbackContext.error("GPS is not enabled");
+        		callbackContext.error(">>>>>>>> GPS is not enabled :(");
         	}
             
             return true;
