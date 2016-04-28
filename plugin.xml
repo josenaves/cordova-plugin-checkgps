@@ -19,6 +19,12 @@
             </feature>
         </config-file>
         <source-file src="src/android/CheckGps.java" target-dir="src/com/joseneaves/plugin" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+			<uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
     </platform>
 
 </plugin>
